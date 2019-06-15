@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190615 12:19:33.284" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
+<robot rpa="false" generated="20190615 12:45:31.961" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
 <suite source="/home/tester/Documents/mkaczmarek/robot/robot/pierwszy.robot" id="s1" name="Pierwszy">
 <test id="s1-t1" name="log to console builtin Test">
 <kw name="Log To Console" library="BuiltIn">
@@ -7,9 +7,9 @@
 <arguments>
 <arg>Hello, console!</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:19:33.311" starttime="20190615 12:19:33.310"></status>
+<status status="PASS" endtime="20190615 12:45:31.990" starttime="20190615 12:45:31.989"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:19:33.311" critical="yes" starttime="20190615 12:19:33.310"></status>
+<status status="PASS" endtime="20190615 12:45:31.990" critical="yes" starttime="20190615 12:45:31.988"></status>
 </test>
 <test id="s1-t2" name="my own login Test">
 <kw name="My own login">
@@ -21,11 +21,11 @@
 <arguments>
 <arg>${my_messsage}</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:19:33.313" starttime="20190615 12:19:33.313"></status>
+<status status="PASS" endtime="20190615 12:45:31.991" starttime="20190615 12:45:31.991"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:19:33.313" starttime="20190615 12:19:33.312"></status>
+<status status="PASS" endtime="20190615 12:45:31.991" starttime="20190615 12:45:31.990"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:19:33.314" critical="yes" starttime="20190615 12:19:33.312"></status>
+<status status="PASS" endtime="20190615 12:45:31.992" critical="yes" starttime="20190615 12:45:31.990"></status>
 </test>
 <test id="s1-t3" name="log to console using variable Test">
 <kw name="Log To Console" library="BuiltIn">
@@ -33,24 +33,57 @@
 <arguments>
 <arg>message_variable</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:19:33.315" starttime="20190615 12:19:33.315"></status>
+<status status="PASS" endtime="20190615 12:45:31.993" starttime="20190615 12:45:31.992"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:19:33.315" critical="yes" starttime="20190615 12:19:33.314"></status>
+<status status="PASS" endtime="20190615 12:45:31.993" critical="yes" starttime="20190615 12:45:31.992"></status>
 </test>
-<status status="PASS" endtime="20190615 12:19:33.315" starttime="20190615 12:19:33.285"></status>
+<test id="s1-t4" name="message contain Test">
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>message_variable</arg>
+<arg>message</arg>
+</arguments>
+<status status="PASS" endtime="20190615 12:45:31.994" starttime="20190615 12:45:31.994"></status>
+</kw>
+<status status="PASS" endtime="20190615 12:45:31.995" critical="yes" starttime="20190615 12:45:31.993"></status>
+</test>
+<test id="s1-t5" name="message comparison Test">
+<kw name="Should Not Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are equal.</doc>
+<arguments>
+<arg>message_variable</arg>
+<arg>Hello, console!</arg>
+</arguments>
+<status status="PASS" endtime="20190615 12:45:31.996" starttime="20190615 12:45:31.995"></status>
+</kw>
+<status status="PASS" endtime="20190615 12:45:31.996" critical="yes" starttime="20190615 12:45:31.995"></status>
+</test>
+<test id="s1-t6" name="message comparison from variable section Test">
+<kw name="Should Not Match" library="BuiltIn">
+<doc>Fails if the given ``string`` matches the given ``pattern``.</doc>
+<arguments>
+<arg>another_message_variable</arg>
+<arg>message_variable</arg>
+</arguments>
+<status status="PASS" endtime="20190615 12:45:31.998" starttime="20190615 12:45:31.997"></status>
+</kw>
+<status status="PASS" endtime="20190615 12:45:31.998" critical="yes" starttime="20190615 12:45:31.996"></status>
+</test>
+<status status="PASS" endtime="20190615 12:45:31.998" starttime="20190615 12:45:31.963"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="3">Critical Tests</stat>
-<stat fail="0" pass="3">All Tests</stat>
+<stat fail="0" pass="6">Critical Tests</stat>
+<stat fail="0" pass="6">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Pierwszy" pass="3">Pierwszy</stat>
+<stat fail="0" id="s1" name="Pierwszy" pass="6">Pierwszy</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190615 12:19:33.281" level="WARN">Collapsing consecutive whitespace during parsing is deprecated. Fix ' ${message_variable}' in file '/home/tester/Documents/mkaczmarek/robot/robot/pierwszy.robot' on line 16.</msg>
+<msg timestamp="20190615 12:45:31.963" level="ERROR">Error in file '/home/tester/Documents/mkaczmarek/robot/robot/pierwszy.robot': Setting variable '${another_message_variable} another message from variable section' failed: Invalid variable name '${another_message_variable} another message from variable section'.</msg>
 </errors>
 </robot>
