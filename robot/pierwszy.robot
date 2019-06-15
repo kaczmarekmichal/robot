@@ -1,6 +1,12 @@
+***Settings***
+Library    SSHLibrary
+
 ***Variables***
 ${message_variable}  message from variable section
-${another_message_variable} another message from variable section
+${another_message_variable}  another message from variable section
+${Remote_host}  127.0.0.1
+${User_name}  tester
+${User_password}  tester
 
 
 ***Test Cases***
@@ -15,7 +21,11 @@ message contain Test
 message comparison Test
     Should Not Be Equal  message_variable  Hello, console!
 message comparison from variable section Test
-    Should Not Match  another_message_variable  message_variable
+    Should Not Match  ${another_message_variable}  ${message_variable}
+connect to remote computer ssh Test
+      Open Connection  ${Remote_host}
+      Login   ${User_name}   ${User_password}
+      Close All Connections
 
 
 ***Keywords***

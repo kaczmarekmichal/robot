@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190615 12:45:31.961" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
+<robot rpa="false" generated="20190615 15:24:05.176" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
 <suite source="/home/tester/Documents/mkaczmarek/robot/robot/pierwszy.robot" id="s1" name="Pierwszy">
 <test id="s1-t1" name="log to console builtin Test">
 <kw name="Log To Console" library="BuiltIn">
@@ -7,9 +7,9 @@
 <arguments>
 <arg>Hello, console!</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:45:31.990" starttime="20190615 12:45:31.989"></status>
+<status status="PASS" endtime="20190615 15:24:05.293" starttime="20190615 15:24:05.293"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:45:31.990" critical="yes" starttime="20190615 12:45:31.988"></status>
+<status status="PASS" endtime="20190615 15:24:05.293" critical="yes" starttime="20190615 15:24:05.292"></status>
 </test>
 <test id="s1-t2" name="my own login Test">
 <kw name="My own login">
@@ -21,11 +21,11 @@
 <arguments>
 <arg>${my_messsage}</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:45:31.991" starttime="20190615 12:45:31.991"></status>
+<status status="PASS" endtime="20190615 15:24:05.295" starttime="20190615 15:24:05.295"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:45:31.991" starttime="20190615 12:45:31.990"></status>
+<status status="PASS" endtime="20190615 15:24:05.295" starttime="20190615 15:24:05.294"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:45:31.992" critical="yes" starttime="20190615 12:45:31.990"></status>
+<status status="PASS" endtime="20190615 15:24:05.295" critical="yes" starttime="20190615 15:24:05.294"></status>
 </test>
 <test id="s1-t3" name="log to console using variable Test">
 <kw name="Log To Console" library="BuiltIn">
@@ -33,9 +33,9 @@
 <arguments>
 <arg>message_variable</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:45:31.993" starttime="20190615 12:45:31.992"></status>
+<status status="PASS" endtime="20190615 15:24:05.296" starttime="20190615 15:24:05.296"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:45:31.993" critical="yes" starttime="20190615 12:45:31.992"></status>
+<status status="PASS" endtime="20190615 15:24:05.297" critical="yes" starttime="20190615 15:24:05.296"></status>
 </test>
 <test id="s1-t4" name="message contain Test">
 <kw name="Should Contain" library="BuiltIn">
@@ -44,9 +44,9 @@
 <arg>message_variable</arg>
 <arg>message</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:45:31.994" starttime="20190615 12:45:31.994"></status>
+<status status="PASS" endtime="20190615 15:24:05.298" starttime="20190615 15:24:05.297"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:45:31.995" critical="yes" starttime="20190615 12:45:31.993"></status>
+<status status="PASS" endtime="20190615 15:24:05.298" critical="yes" starttime="20190615 15:24:05.297"></status>
 </test>
 <test id="s1-t5" name="message comparison Test">
 <kw name="Should Not Be Equal" library="BuiltIn">
@@ -55,35 +55,81 @@
 <arg>message_variable</arg>
 <arg>Hello, console!</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:45:31.996" starttime="20190615 12:45:31.995"></status>
+<status status="PASS" endtime="20190615 15:24:05.299" starttime="20190615 15:24:05.299"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:45:31.996" critical="yes" starttime="20190615 12:45:31.995"></status>
+<status status="PASS" endtime="20190615 15:24:05.299" critical="yes" starttime="20190615 15:24:05.298"></status>
 </test>
 <test id="s1-t6" name="message comparison from variable section Test">
 <kw name="Should Not Match" library="BuiltIn">
 <doc>Fails if the given ``string`` matches the given ``pattern``.</doc>
 <arguments>
-<arg>another_message_variable</arg>
-<arg>message_variable</arg>
+<arg>${another_message_variable}</arg>
+<arg>${message_variable}</arg>
 </arguments>
-<status status="PASS" endtime="20190615 12:45:31.998" starttime="20190615 12:45:31.997"></status>
+<status status="PASS" endtime="20190615 15:24:05.301" starttime="20190615 15:24:05.300"></status>
 </kw>
-<status status="PASS" endtime="20190615 12:45:31.998" critical="yes" starttime="20190615 12:45:31.996"></status>
+<status status="PASS" endtime="20190615 15:24:05.301" critical="yes" starttime="20190615 15:24:05.300"></status>
 </test>
-<status status="PASS" endtime="20190615 12:45:31.998" starttime="20190615 12:45:31.963"></status>
+<test id="s1-t7" name="connect to remote computer ssh Test">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${Remote_host}</arg>
+</arguments>
+<status status="PASS" endtime="20190615 15:24:05.306" starttime="20190615 15:24:05.304"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>${User_name}</arg>
+<arg>${User_password}</arg>
+</arguments>
+<msg timestamp="20190615 15:24:05.307" level="INFO">Logging into '127.0.0.1:22' as 'tester'.</msg>
+<msg timestamp="20190615 15:24:06.757" level="INFO">Read output: Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Ubuntu's Kubernetes 1.14 distributions can bypass Docker and use containerd
+   directly, see https://bit.ly/ubuntu-containerd or try it now with
+
+     snap install microk8s --channel=1.14/beta --classic
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+214 packages can be updated.
+0 updates are security updates.
+
+*** System restart required ***
+----------------------------------------------------------------
+  Ubuntu 18.04.1 LTS                          built 2018-10-04
+----------------------------------------------------------------
+Last login: Sat Jun 15 15:23:32 2019 from 127.0.0.1
+tester@tester-m:~$</msg>
+<status status="PASS" endtime="20190615 15:24:06.758" starttime="20190615 15:24:05.306"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190615 15:24:06.877" starttime="20190615 15:24:06.759"></status>
+</kw>
+<status status="PASS" endtime="20190615 15:24:06.877" critical="yes" starttime="20190615 15:24:05.302"></status>
+</test>
+<status status="PASS" endtime="20190615 15:24:06.878" starttime="20190615 15:24:05.177"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="6">Critical Tests</stat>
-<stat fail="0" pass="6">All Tests</stat>
+<stat fail="0" pass="7">Critical Tests</stat>
+<stat fail="0" pass="7">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Pierwszy" pass="6">Pierwszy</stat>
+<stat fail="0" id="s1" name="Pierwszy" pass="7">Pierwszy</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190615 12:45:31.963" level="ERROR">Error in file '/home/tester/Documents/mkaczmarek/robot/robot/pierwszy.robot': Setting variable '${another_message_variable} another message from variable section' failed: Invalid variable name '${another_message_variable} another message from variable section'.</msg>
 </errors>
 </robot>
