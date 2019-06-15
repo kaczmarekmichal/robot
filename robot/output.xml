@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190615 11:25:21.588" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
+<suite source="/home/tester/Documents/mkaczmarek/robot/robot/pierwszy.robot" id="s1" name="Pierwszy">
+<test id="s1-t1" name="pierwszy Test">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Hello, console!</arg>
+</arguments>
+<status status="PASS" endtime="20190615 11:25:21.614" starttime="20190615 11:25:21.614"></status>
+</kw>
+<status status="PASS" endtime="20190615 11:25:21.615" critical="yes" starttime="20190615 11:25:21.614"></status>
+</test>
+<status status="PASS" endtime="20190615 11:25:21.615" starttime="20190615 11:25:21.590"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Pierwszy" pass="1">Pierwszy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
