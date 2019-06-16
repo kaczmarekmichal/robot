@@ -2,6 +2,10 @@
 Library    SSHLibrary
 Library    dodatkowy_plik_pythonowy.py
 Library    SeleniumLibrary
+Library    OperatingSystem
+
+
+
 
 ***Variables***
 ${message_variable}  message from variable section
@@ -51,7 +55,7 @@ connect to remote computer ssh -user name Test
         Login   ${User_name}   ${User_password}
         ${response} =  Execute Command  uname -a
         Should Contain  ${response}  Linux tester
-        Close All ConnectionsCapture Page Screenshot
+        Close All Connections
 
 connect to remote computer ssh -number of CPU Test
       Open Connection  ${Remote_host}
@@ -84,6 +88,13 @@ log into wp mail Test
     Page Should Contain  Odebrane
     Capture Page Screenshot
     Close Browser
+
+run bash script Test
+  ${response} =   Run   ./skrypt_bash.sh lo
+  Should Contain  ${response}  127.0.0.1
+
+
+
 
 
 
