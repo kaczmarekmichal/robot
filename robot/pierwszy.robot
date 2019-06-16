@@ -1,6 +1,7 @@
 ***Settings***
 Library    SSHLibrary
 Library    dodatkowy_plik_pythonowy.py
+Library    SeleniumLibrary
 
 ***Variables***
 ${message_variable}  message from variable section
@@ -8,6 +9,13 @@ ${another_message_variable}  another message from variable section
 ${Remote_host}  127.0.0.1
 ${User_name}  tester
 ${User_password}  tester
+${BROWSER}   Firefox
+${MAIN_PAGE}  http://poczta.wp.pl
+${WP_USER}  testerwsb_t1
+${WP_PASSWORD}  adam1234
+${LOGIN_FIELD}  //*[@id="login"]
+${PASSWORD_FIELD}  //*[@id="password"]
+${SUBMIT_BUTTON}  //*[@id="btnSubmit"]
 
 
 ***Test Cases***
@@ -43,7 +51,7 @@ connect to remote computer ssh -user name Test
         Login   ${User_name}   ${User_password}
         ${response} =  Execute Command  uname -a
         Should Contain  ${response}  Linux tester
-        Close All Connections
+        Close All ConnectionsCapture Page Screenshot
 
 connect to remote computer ssh -number of CPU Test
       Open Connection  ${Remote_host}
@@ -66,6 +74,16 @@ external python library Test
 external python library 2nd Test
       ${response} =   print_hello
       Should Be Equal   ${response}   Wiadomosc powitalna
+
+log into wp mail Test
+    Open Browser  ${MAIN_PAGE}   ${BROWSER}
+    Input Text  ${LOGIN_FIELD}   ${WP_USER}
+    Input Password   ${PASSWORD_FIELD}    ${WP_PASSWORD}
+    Click Element   ${SUBMIT_BUTTON}
+    Page Should Contain  Odebrane
+    Capture Page Screenshot
+    Close Browser
+
 
 
 
