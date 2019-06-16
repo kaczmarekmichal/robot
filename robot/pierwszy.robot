@@ -80,6 +80,7 @@ log into wp mail Test
     Input Text  ${LOGIN_FIELD}   ${WP_USER}
     Input Password   ${PASSWORD_FIELD}    ${WP_PASSWORD}
     Click Element   ${SUBMIT_BUTTON}
+    Sleep  5
     Page Should Contain  Odebrane
     Capture Page Screenshot
     Close Browser
