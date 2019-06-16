@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190616 08:35:13.998" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
+<robot rpa="false" generated="20190616 09:03:13.251" generator="Robot 3.1.2 (Python 2.7.15rc1 on linux2)">
 <suite source="/home/tester/Documents/mkaczmarek/robot/robot/pierwszy.robot" id="s1" name="Pierwszy">
 <test id="s1-t1" name="log to console builtin Test">
 <kw name="Log To Console" library="BuiltIn">
@@ -7,9 +7,9 @@
 <arguments>
 <arg>Hello, console!</arg>
 </arguments>
-<status status="PASS" endtime="20190616 08:35:14.174" starttime="20190616 08:35:14.174"></status>
+<status status="PASS" endtime="20190616 09:03:13.364" starttime="20190616 09:03:13.363"></status>
 </kw>
-<status status="PASS" endtime="20190616 08:35:14.174" critical="yes" starttime="20190616 08:35:14.173"></status>
+<status status="PASS" endtime="20190616 09:03:13.364" critical="yes" starttime="20190616 09:03:13.363"></status>
 </test>
 <test id="s1-t2" name="my own login Test">
 <kw name="My own login">
@@ -21,11 +21,11 @@
 <arguments>
 <arg>${my_messsage}</arg>
 </arguments>
-<status status="PASS" endtime="20190616 08:35:14.176" starttime="20190616 08:35:14.175"></status>
+<status status="PASS" endtime="20190616 09:03:13.365" starttime="20190616 09:03:13.365"></status>
 </kw>
-<status status="PASS" endtime="20190616 08:35:14.176" starttime="20190616 08:35:14.175"></status>
+<status status="PASS" endtime="20190616 09:03:13.366" starttime="20190616 09:03:13.365"></status>
 </kw>
-<status status="PASS" endtime="20190616 08:35:14.176" critical="yes" starttime="20190616 08:35:14.175"></status>
+<status status="PASS" endtime="20190616 09:03:13.366" critical="yes" starttime="20190616 09:03:13.364"></status>
 </test>
 <test id="s1-t3" name="log to console using variable Test">
 <kw name="Log To Console" library="BuiltIn">
@@ -33,9 +33,9 @@
 <arguments>
 <arg>${message_variable}</arg>
 </arguments>
-<status status="PASS" endtime="20190616 08:35:14.177" starttime="20190616 08:35:14.177"></status>
+<status status="PASS" endtime="20190616 09:03:13.367" starttime="20190616 09:03:13.367"></status>
 </kw>
-<status status="PASS" endtime="20190616 08:35:14.177" critical="yes" starttime="20190616 08:35:14.176"></status>
+<status status="PASS" endtime="20190616 09:03:13.367" critical="yes" starttime="20190616 09:03:13.366"></status>
 </test>
 <test id="s1-t4" name="message contain Test">
 <kw name="Should Contain" library="BuiltIn">
@@ -44,9 +44,9 @@
 <arg>${message_variable}</arg>
 <arg>message</arg>
 </arguments>
-<status status="PASS" endtime="20190616 08:35:14.178" starttime="20190616 08:35:14.178"></status>
+<status status="PASS" endtime="20190616 09:03:13.368" starttime="20190616 09:03:13.368"></status>
 </kw>
-<status status="PASS" endtime="20190616 08:35:14.178" critical="yes" starttime="20190616 08:35:14.178"></status>
+<status status="PASS" endtime="20190616 09:03:13.368" critical="yes" starttime="20190616 09:03:13.367"></status>
 </test>
 <test id="s1-t5" name="message comparison Test">
 <kw name="Should Not Be Equal" library="BuiltIn">
@@ -55,9 +55,9 @@
 <arg>${message_variable}</arg>
 <arg>Hello, console!</arg>
 </arguments>
-<status status="PASS" endtime="20190616 08:35:14.180" starttime="20190616 08:35:14.179"></status>
+<status status="PASS" endtime="20190616 09:03:13.369" starttime="20190616 09:03:13.369"></status>
 </kw>
-<status status="PASS" endtime="20190616 08:35:14.180" critical="yes" starttime="20190616 08:35:14.179"></status>
+<status status="PASS" endtime="20190616 09:03:13.370" critical="yes" starttime="20190616 09:03:13.369"></status>
 </test>
 <test id="s1-t6" name="message comparison from variable section Test">
 <kw name="Should Not Match" library="BuiltIn">
@@ -66,17 +66,17 @@
 <arg>${another_message_variable}</arg>
 <arg>${message_variable}</arg>
 </arguments>
-<status status="PASS" endtime="20190616 08:35:14.181" starttime="20190616 08:35:14.181"></status>
+<status status="PASS" endtime="20190616 09:03:13.371" starttime="20190616 09:03:13.370"></status>
 </kw>
-<status status="PASS" endtime="20190616 08:35:14.181" critical="yes" starttime="20190616 08:35:14.180"></status>
+<status status="PASS" endtime="20190616 09:03:13.371" critical="yes" starttime="20190616 09:03:13.370"></status>
 </test>
-<test id="s1-t7" name="connect to remote computer ssh Test">
+<test id="s1-t7" name="connect to remote computer ssh - internet connection Test">
 <kw name="Open Connection" library="SSHLibrary">
 <doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
 <arguments>
 <arg>${Remote_host}</arg>
 </arguments>
-<status status="PASS" endtime="20190616 08:35:14.183" starttime="20190616 08:35:14.182"></status>
+<status status="PASS" endtime="20190616 09:03:13.373" starttime="20190616 09:03:13.372"></status>
 </kw>
 <kw name="Login" library="SSHLibrary">
 <doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
@@ -84,8 +84,8 @@
 <arg>${User_name}</arg>
 <arg>${User_password}</arg>
 </arguments>
-<msg timestamp="20190616 08:35:14.183" level="INFO">Logging into '127.0.0.1:22' as 'tester'.</msg>
-<msg timestamp="20190616 08:35:15.601" level="INFO">Read output: Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-51-generic x86_64)
+<msg timestamp="20190616 09:03:13.373" level="INFO">Logging into '127.0.0.1:22' as 'tester'.</msg>
+<msg timestamp="20190616 09:03:14.857" level="INFO">Read output: Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-51-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
@@ -106,36 +106,120 @@
 ----------------------------------------------------------------
   Ubuntu 18.04.1 LTS                          built 2018-10-04
 ----------------------------------------------------------------
-Last login: Sun Jun 16 08:34:29 2019 from 127.0.0.1
+Last login: Sun Jun 16 09:02:42 2019 from 127.0.0.1
 tester@tester-m:~$</msg>
-<status status="PASS" endtime="20190616 08:35:15.602" starttime="20190616 08:35:14.183"></status>
+<status status="PASS" endtime="20190616 09:03:14.857" starttime="20190616 09:03:13.373"></status>
 </kw>
 <kw name="Execute Command" library="SSHLibrary">
 <doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
 <arguments>
 <arg>ping -c1 8.8.8.8</arg>
 </arguments>
-<msg timestamp="20190616 08:35:15.604" level="INFO">Executing command 'ping -c1 8.8.8.8'.</msg>
-<msg timestamp="20190616 08:35:15.682" level="INFO">Command exited with return code 0.</msg>
-<status status="PASS" endtime="20190616 08:35:15.682" starttime="20190616 08:35:15.603"></status>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20190616 09:03:14.860" level="INFO">Executing command 'ping -c1 8.8.8.8'.</msg>
+<msg timestamp="20190616 09:03:14.884" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20190616 09:03:14.884" level="INFO">${response} = PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=56 time=9.12 ms
+
+--- 8.8.8.8 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/...</msg>
+<status status="PASS" endtime="20190616 09:03:14.884" starttime="20190616 09:03:14.859"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>1 received</arg>
+</arguments>
+<status status="PASS" endtime="20190616 09:03:14.886" starttime="20190616 09:03:14.884"></status>
 </kw>
 <kw name="Close All Connections" library="SSHLibrary">
 <doc>Closes all open connections.</doc>
-<status status="PASS" endtime="20190616 08:35:15.754" starttime="20190616 08:35:15.683"></status>
+<status status="PASS" endtime="20190616 09:03:14.924" starttime="20190616 09:03:14.886"></status>
 </kw>
-<status status="PASS" endtime="20190616 08:35:15.754" critical="yes" starttime="20190616 08:35:14.182"></status>
+<status status="PASS" endtime="20190616 09:03:14.924" critical="yes" starttime="20190616 09:03:13.372"></status>
 </test>
-<status status="PASS" endtime="20190616 08:35:15.755" starttime="20190616 08:35:13.999"></status>
+<test id="s1-t8" name="connect to remote computer ssh -user name Test">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${Remote_host}</arg>
+</arguments>
+<status status="PASS" endtime="20190616 09:03:14.927" starttime="20190616 09:03:14.926"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>${User_name}</arg>
+<arg>${User_password}</arg>
+</arguments>
+<msg timestamp="20190616 09:03:14.928" level="INFO">Logging into '127.0.0.1:22' as 'tester'.</msg>
+<msg timestamp="20190616 09:03:16.309" level="INFO">Read output: Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-51-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Ubuntu's Kubernetes 1.14 distributions can bypass Docker and use containerd
+   directly, see https://bit.ly/ubuntu-containerd or try it now with
+
+     snap install microk8s --classic
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+218 packages can be updated.
+0 updates are security updates.
+
+----------------------------------------------------------------
+  Ubuntu 18.04.1 LTS                          built 2018-10-04
+----------------------------------------------------------------
+Last login: Sun Jun 16 09:03:13 2019 from 127.0.0.1
+tester@tester-m:~$</msg>
+<status status="PASS" endtime="20190616 09:03:16.310" starttime="20190616 09:03:14.927"></status>
+</kw>
+<kw name="Execute Command" library="SSHLibrary">
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<arguments>
+<arg>uname -a</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20190616 09:03:16.311" level="INFO">Executing command 'uname -a'.</msg>
+<msg timestamp="20190616 09:03:16.326" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20190616 09:03:16.326" level="INFO">${response} = Linux tester-m 4.15.0-51-generic #55-Ubuntu SMP Wed May 15 14:27:21 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux</msg>
+<status status="PASS" endtime="20190616 09:03:16.326" starttime="20190616 09:03:16.310"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>Linux tester</arg>
+</arguments>
+<status status="PASS" endtime="20190616 09:03:16.327" starttime="20190616 09:03:16.326"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190616 09:03:16.395" starttime="20190616 09:03:16.327"></status>
+</kw>
+<status status="PASS" endtime="20190616 09:03:16.396" critical="yes" starttime="20190616 09:03:14.925"></status>
+</test>
+<status status="PASS" endtime="20190616 09:03:16.397" starttime="20190616 09:03:13.252"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="7">Critical Tests</stat>
-<stat fail="0" pass="7">All Tests</stat>
+<stat fail="0" pass="8">Critical Tests</stat>
+<stat fail="0" pass="8">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Pierwszy" pass="7">Pierwszy</stat>
+<stat fail="0" id="s1" name="Pierwszy" pass="8">Pierwszy</stat>
 </suite>
 </statistics>
 <errors>

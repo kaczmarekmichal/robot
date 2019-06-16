@@ -22,11 +22,20 @@ message comparison Test
     Should Not Be Equal  ${message_variable}  Hello, console!
 message comparison from variable section Test
     Should Not Match  ${another_message_variable}  ${message_variable}
-connect to remote computer ssh Test
+connect to remote computer ssh - internet connection Test
       Open Connection  ${Remote_host}
       Login   ${User_name}   ${User_password}
-      Execute Command  ping -c1 8.8.8.8
+      ${response} =  Execute Command  ping -c1 8.8.8.8
+      Should Contain  ${response}  1 received
       Close All Connections
+
+connect to remote computer ssh -user name Test
+        Open Connection  ${Remote_host}
+        Login   ${User_name}   ${User_password}
+        ${response} =  Execute Command  uname -a
+        Should Contain  ${response}  Linux tester
+        Close All Connections
+
 
 
 ***Keywords***
