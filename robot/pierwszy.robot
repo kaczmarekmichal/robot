@@ -25,6 +25,7 @@ message comparison from variable section Test
 connect to remote computer ssh Test
       Open Connection  ${Remote_host}
       Login   ${User_name}   ${User_password}
+      Execute Command  ping -c1 8.8.8.8
       Close All Connections
 
 
