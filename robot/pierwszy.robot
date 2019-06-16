@@ -1,5 +1,6 @@
 ***Settings***
 Library    SSHLibrary
+Library    dodatkowy_plik_pythonowy.py
 
 ***Variables***
 ${message_variable}  message from variable section
@@ -57,6 +58,15 @@ connect to remote computer ssh -number of CPU using grep Test
       ${response} =  Execute Command  cat /proc/cpuinfo | grep -wc processor
       Should Be Equal  ${response}  4
       Close All Connections
+
+external python library Test
+      ${response} =   print_hello_world
+      Should Be Equal   ${response}   Hello world
+
+external python library 2nd Test
+      ${response} =   print_hello
+      Should Be Equal   ${response}   Wiadomosc powitalna
+
 
 
 
